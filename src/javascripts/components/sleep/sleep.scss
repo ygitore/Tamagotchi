@@ -1,0 +1,31 @@
+#sleep{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    text-align: center;
+    background-color: rgb(115, 124, 106);
+    width: 50%;
+    height: 50%;
+    .sleepContainer{
+      margin-top: 5%;
+      display: flex;
+      flex-direction: row wrap;
+      flex-grow: 1;   
+      align-items: center;
+      justify-content: center;
+      button{
+        font-size: 15px;
+        border-radius: 10px;
+        border: none;
+        color:white;
+        background: rgb(23, 77, 99);
+        padding: 10px; 
+        width: 100px;
+        height: 35px;
+     }
+    .btn-nap{
+      margin-right: 20px;      
+     }
+  }
+
+}
