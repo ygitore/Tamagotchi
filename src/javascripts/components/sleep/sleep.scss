@@ -1,0 +1,69 @@
+#sleep{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    text-align: center;
+    background-color: rgb(115, 124, 106);
+    width: 50%;
+    height: 50%;
+    .sleep{
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      font-size: 30px;
+      font-weight: bold;
+      text-align: left;
+      margin-left: 10px;
+      margin-top: 10px;
+      color:white;
+      text-shadow: 1px 5px rgb(24, 25, 26);
+    }
+    .sleepContainer{
+      margin-top: 5%;
+      position: absolute;
+      top: 29%;
+      left: 34%;
+      display: flex;
+      flex-direction: row wrap;
+      flex-grow: 1;   
+      align-items: center;
+      justify-content: center;
+      button{
+        font-size: 15px;
+        border-radius: 10px;
+        border: none;
+        color:white;
+        background: rgb(23, 77, 99);
+        padding: 10px; 
+        width: 100px;
+        height: 35px;
+     }
+    .btn-nap{
+      margin-right: 130px;      
+     }
+  }
+}
+.sleep-progress-bar-container
+{
+  position: absolute;
+  margin-top: 10px;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-color: rgb(158, 157, 157);
+  border-radius: 15px;     
+  #sleep-progress-increase
+  {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    height: 30px;
+    z-index: 1;
+    background-color: rgb(16, 67, 77);
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 50%;
+  }   
+}

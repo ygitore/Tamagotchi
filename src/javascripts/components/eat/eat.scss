@@ -1,0 +1,72 @@
+#eat{
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background-color: rgb(94, 104, 105);
+    width: 50%;
+    height: 50%;
+    .eat-quadrant{
+     position: absolute;
+     top: 10px;
+     left: 50%;
+     font-size: 30px;
+     font-weight: bold;
+     text-align: left;
+     margin-left: 10px;
+     margin-top: 10px;
+     color:white;
+     text-shadow: 1px 5px rgb(24, 25, 26);
+    }
+    .eatContainer{
+        top:30%;
+        left: 30%;
+        position: absolute;
+        margin-top: 5%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-grow: 1;   
+        align-items: center;
+        justify-content: space-around;
+        button{
+          font-size: 15px;
+          border-radius: 10px;
+          border: none;
+          color:white;
+          background: rgb(23, 77, 99);
+          padding: 10px; 
+          width: auto;
+          height: 35px;
+       }
+      .btn-healthy-food{
+        margin-right: 120px;      
+       }
+  }
+}
+
+.progressContainer
+{
+   margin-top: 10px;
+   top: 55%;
+   left: 25%;
+   width: 100%;
+   height: 30px;
+   background-color: rgb(158, 157, 157);
+   border-radius: 15px; 
+   #progressIncrease
+   {
+     border-top-left-radius: 15px;
+     border-bottom-left-radius: 15px;
+     background-color: rgb(16, 67, 77);
+     height: 30px;
+     z-index: 1;
+     display: block;
+     position: absolute;
+     top: 60%;
+     left: 0;
+     width: 50%;
+ }   
+}
+
+       
