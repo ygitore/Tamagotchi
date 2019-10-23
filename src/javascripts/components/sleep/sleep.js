@@ -3,12 +3,18 @@ import './sleep.scss';
 
 const sleepPrint = () => {
   let domString = '';
-  domString += `<div class="sleepContainer">
+  domString += `<div class="sleep">Sleep</div>
+                <div class="sleepContainer">
                   <div  class="btn-nap btn-nap-slumber">
-                    <button>nap</button>
+                    <button class="nap">Nap</button>
                   </div>
                   <div class="btn-slumber">
-                    <button>slumber</button>
+                    <button>Slumber</button>
+                  </div>
+                  <div class="sleep-progress-bar-container">
+                    <div>
+                      <div id="sleep-progress-increase"></div>
+                    </div>
                   </div>
                 </div>`;
   util.printToDom('sleep', domString);

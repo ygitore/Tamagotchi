@@ -4,12 +4,12 @@ import './progressbar.scss';
 const progressbarPrint = () => {
   let domString = '';
   domString += `<div class="prgr-overall-health">
-                  <h4>Over all health</h4>
+                  <div class ="over-all-health">Over All Health</div>
                   <div class="progressPercentageContainer">
-                  <div class="progressPercentage">
-                  <div>
-                </div>
-                  </>
+                    <div class="progressbar-container">
+                      <div id="progressPercentage"></div>
+                    </div>
+                  </div>
                 </div>`;
   util.printToDom('progress', domString);
 };

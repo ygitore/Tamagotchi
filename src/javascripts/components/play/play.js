@@ -3,12 +3,18 @@ import './play.scss';
 
 const printPlay = () => {
   let domString = '';
-  domString += `<div class="playContainer">
+  domString += `<div class="play">Play</div>
+                <div class="playContainer">
                   <div class='btn-fun'>
-                  <button>super fun</button>
+                    <button>Super Fun</button>
                   </div>
                   <div>
-                  <button>slightly fun</button>
+                    <button>Slightly Fun</button>
+                  </div>
+                  <div class="play-progress-bar-container">
+                    <div>
+                      <div id="play-progress-increase"></div>
+                    </div>
                   </div>
                 </div>`;
   util.printToDom('play', domString);
