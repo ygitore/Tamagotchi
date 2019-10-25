@@ -13,5 +13,6 @@ const init = () => {
   progressbar.progressbarPrint();
   eat.eatAttachments();
   fight.fightAttachments();
+  play.playAttachments();
 };
 init();
