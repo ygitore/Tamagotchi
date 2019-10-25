@@ -52,8 +52,8 @@ const eatUnhealthyfood = () => {
   progBar.textContent = `${full}%`;
   progBar.style.width = `${full}%`;
 };
-const attachments = () => {
+const eatAttachments = () => {
   document.getElementById('btn-healthy-food').addEventListener('click', eatHealthyfood);
   document.getElementById('btn-unhealthy-food').addEventListener('click', eatUnhealthyfood);
 };
-export default { printEat, attachments };
+export default { printEat, eatAttachments };
