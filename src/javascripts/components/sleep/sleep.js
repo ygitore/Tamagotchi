@@ -1,14 +1,15 @@
 import util from '../../helpers/utilities';
 import './sleep.scss';
 
+let energy = 50;
 const sleepPrint = () => {
   let domString = '';
   domString += `<div class="sleep">Sleep</div>
                 <div class="sleepContainer">
                   <div  class="btn-nap btn-nap-slumber">
-                    <button class="nap">Nap</button>
+                    <button id = "btn-nap" class="nap">Nap</button>
                   </div>
-                  <div class="btn-slumber">
+                  <div id = "btn-slumber" class="btn-slumber">
                     <button>Slumber</button>
                   </div>
                   <div class="sleep-progress-bar-container">
@@ -19,5 +20,46 @@ const sleepPrint = () => {
                 </div>`;
   util.printToDom('sleep', domString);
 };
-
-export default { sleepPrint };
+const takeNap = () => {
+  const progBar = document.getElementById('sleep-progress-increase');
+  progBar.style.borderBottomRightRadius = '15px';
+  progBar.style.borderTopRightRadius = '15px';
+  progBar.textContent = `${energy}%`;
+  if (energy >= 100) {
+    energy = 100;
+  } else {
+    energy += 50;
+    if (energy >= 100) {
+      energy = 100;
+    } else {
+      progBar.style.borderBottomRightRadius = '0px';
+      progBar.style.borderTopRightRadius = '0px';
+    }
+  }
+  progBar.textContent = `${energy}%`;
+  progBar.style.width = `${energy}%`;
+};
+const deepSlumber = () => {
+  const progBar = document.getElementById('sleep-progress-increase');
+  progBar.style.borderBottomRightRadius = '15px';
+  progBar.style.borderTopRightRadius = '15px';
+  progBar.textContent = `${energy}%`;
+  if (energy >= 100) {
+    energy = 100;
+  } else {
+    energy += 60;
+    if (energy >= 100) {
+      energy = 100;
+    } else {
+      progBar.style.borderBottomRightRadius = '0px';
+      progBar.style.borderTopRightRadius = '0px';
+    }
+  }
+  progBar.textContent = `${energy}%`;
+  progBar.style.width = `${energy}%`;
+};
+const sleepAttachements = () => {
+  document.getElementById('btn-nap').addEventListener('click', takeNap);
+  document.getElementById('btn-slumber').addEventListener('click', takeNap);
+};
+export default { sleepPrint, sleepAttachements };
