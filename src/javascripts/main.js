@@ -14,5 +14,6 @@ const init = () => {
   eat.eatAttachments();
   fight.fightAttachments();
   play.playAttachments();
+  sleep.sleepAttachements();
 };
 init();
