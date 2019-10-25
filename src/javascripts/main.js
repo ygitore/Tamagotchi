@@ -11,5 +11,6 @@ const init = () => {
   play.printPlay();
   sleep.sleepPrint();
   progressbar.progressbarPrint();
+  eat.attachments();
 };
 init();

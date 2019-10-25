@@ -39,7 +39,7 @@
           width: auto;
           height: 35px;
        }
-      .btn-healthy-food{
+      .btn-healthy-food {
         margin-right: 120px;      
        }
   }
@@ -56,16 +56,15 @@
    border-radius: 15px; 
    #progressIncrease
    {
-     border-top-left-radius: 15px;
-     border-bottom-left-radius: 15px;
-     background-color: rgb(16, 67, 77);
+     border-radius: 15px;
+     background-color: rgb(60, 114, 102);
      height: 30px;
      z-index: 1;
      display: block;
      position: absolute;
      top: 60%;
      left: 0;
-     width: 50%;
+     width: 100%;
  }   
 }
 
