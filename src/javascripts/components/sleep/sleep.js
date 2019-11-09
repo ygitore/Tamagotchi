@@ -1,4 +1,6 @@
 import util from '../../helpers/utilities';
+import pet from '../pet/pet';
+
 import './sleep.scss';
 
 let energy = 50;
@@ -19,6 +21,8 @@ const sleepPrint = () => {
                   </div>
                 </div>`;
   util.printToDom('sleep', domString);
+  pet.petOverallHealth(3, energy);
+  pet.petHealthStatus();
 };
 const takeNap = () => {
   const progBar = document.getElementById('sleep-progress-increase');
@@ -38,6 +42,8 @@ const takeNap = () => {
   }
   progBar.textContent = `${energy}%`;
   progBar.style.width = `${energy}%`;
+  pet.petOverallHealth(3, energy);
+  pet.petHealthStatus();
 };
 const deepSlumber = () => {
   const progBar = document.getElementById('sleep-progress-increase');
@@ -57,9 +63,12 @@ const deepSlumber = () => {
   }
   progBar.textContent = `${energy}%`;
   progBar.style.width = `${energy}%`;
+  pet.petOverallHealth(3, energy);
+  pet.petHealthStatus();
 };
 const sleepAttachements = () => {
   document.getElementById('btn-nap').addEventListener('click', takeNap);
-  document.getElementById('btn-slumber').addEventListener('click', takeNap);
+  document.getElementById('btn-slumber').addEventListener('click', deepSlumber);
 };
-export default { sleepPrint, sleepAttachements };
+const getEnergy = () => energy;
+export default { sleepPrint, sleepAttachements, getEnergy };

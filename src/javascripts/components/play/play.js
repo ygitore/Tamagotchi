@@ -1,4 +1,5 @@
 import util from '../../helpers/utilities';
+import pet from '../pet/pet';
 import './play.scss';
 
 let fun = 50;
@@ -19,6 +20,8 @@ const printPlay = () => {
                   </div>
                 </div>`;
   util.printToDom('play', domString);
+  pet.petOverallHealth(1, fun);
+  pet.petHealthStatus();
 };
 const superFun = () => {
   const progBar = document.getElementById('play-progress-increase');
@@ -38,6 +41,8 @@ const superFun = () => {
   }
   progBar.textContent = `${fun}%`;
   progBar.style.width = `${fun}%`;
+  pet.petOverallHealth(1, fun);
+  pet.petHealthStatus();
 };
 const slightlyFun = () => {
   const progBar = document.getElementById('play-progress-increase');
@@ -50,6 +55,8 @@ const slightlyFun = () => {
   }
   progBar.textContent = `${fun}%`;
   progBar.style.width = `${fun}%`;
+  pet.petOverallHealth(1, fun);
+  pet.petHealthStatus();
 };
 const playAttachments = () => {
   document.getElementById('super-fun').addEventListener('click', superFun);

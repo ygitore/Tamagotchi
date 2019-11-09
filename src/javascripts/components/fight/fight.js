@@ -1,4 +1,6 @@
 import util from '../../helpers/utilities';
+import pet from '../pet/pet';
+
 import './fight.scss';
 
 let strength = 100;
@@ -21,6 +23,8 @@ const printFight = () => {
                   </div>
                  </div>`;
   util.printToDom('fight', domString);
+  pet.petOverallHealth(2, strength);
+  pet.petHealthStatus();
 };
 const committingViolence = () => {
   const progBar = document.getElementById('fight-progress-increase');
@@ -33,6 +37,8 @@ const committingViolence = () => {
   }
   progBar.textContent = `${strength}%`;
   progBar.style.width = `${strength}%`;
+  pet.petOverallHealth(2, strength);
+  pet.petHealthStatus();
 };
 const runningAway = () => {
   const progBar = document.getElementById('fight-progress-increase');
@@ -52,6 +58,8 @@ const runningAway = () => {
   }
   progBar.textContent = `${strength}%`;
   progBar.style.width = `${strength}%`;
+  pet.petOverallHealth(2, strength);
+  pet.petHealthStatus();
 };
 const fightAttachments = () => {
   document.getElementById('btn-braverly').addEventListener('click', runningAway);

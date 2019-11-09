@@ -2,7 +2,7 @@ import eat from './components/eat/eat';
 import play from './components/play/play';
 import fight from './components/fight/fight';
 import sleep from './components/sleep/sleep';
-import progressbar from './components/progressbar/progressbar';
+import pet from './components/pet/pet';
 import '../styles/main.scss';
 
 const init = () => {
@@ -10,10 +10,10 @@ const init = () => {
   fight.printFight();
   play.printPlay();
   sleep.sleepPrint();
-  progressbar.progressbarPrint();
   eat.eatAttachments();
   fight.fightAttachments();
   play.playAttachments();
   sleep.sleepAttachements();
+  pet.petDomString();
 };
 init();
